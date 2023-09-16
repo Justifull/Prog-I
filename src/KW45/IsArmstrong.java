@@ -24,7 +24,7 @@ package KW45;
  * - Mittels / 10 koennen Sie eine Zahl um eine Stelle nach rechts "rausschieben".
  *
  */
-class IsArmstrong {
+public class IsArmstrong {
     public static int numLength(int n) {
         int num = n;
         int length = 0;
