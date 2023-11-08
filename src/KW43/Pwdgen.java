@@ -27,13 +27,13 @@ class Pwdgen {
 
     public static String pwdgen(String s) {
         String[] partsS = s.split(" ");
-        String result = String.valueOf(partsS.length);
+        StringBuilder result = new StringBuilder(String.valueOf(partsS.length));
         for (int i = 0; i < partsS.length; i++) {
             String currentString = partsS[i];
-            if (i % 2 == 0) result += currentString.charAt(0);
-            else result += currentString.charAt(currentString.length() - 1);
+            if (i % 2 == 0) result.append(currentString.charAt(0));
+            else result.append(currentString.charAt(currentString.length() - 1));
         }
-        return result;
+        return result.toString();
     }
     public static void main(String[] args) {
         String pwd = pwdgen("Dies ist nur ein doofes Beispiel");

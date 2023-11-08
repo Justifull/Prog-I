@@ -20,7 +20,7 @@ class RotateString {
 
     public static String rotate(int n, String s) {
         if (s.isEmpty()) return "";
-        int r = n % s.length();
+        int r = Math.abs(n) % s.length();
         r = r < 0 ? r + s.length() : r;
         String left = s.substring(s.length() - r);
         String right = s.substring(0, s.length() - r);

@@ -1,4 +1,4 @@
-package KW40;
+package KW41;
 /**
  * ## Zeichenketten formatieren mit `endUp()`
  *

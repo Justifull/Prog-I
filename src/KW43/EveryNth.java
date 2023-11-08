@@ -20,11 +20,11 @@ class EveryNth {
 
     public static String everyNth(String s, int n) {
         if (n <= 0) return "";
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
-            if (i % n == 0) result += s.charAt(i);
+            if (i % n == 0) result.append(s.charAt(i));
         }
-        return result;
+        return result.toString();
     }
 
     public static void main(String[] args) {

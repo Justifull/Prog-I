@@ -1,4 +1,4 @@
-package KW43;
+package KW44;
 /**
  * ## Vorkommen von Zeichenketten zählen
  *

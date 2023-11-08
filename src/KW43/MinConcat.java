@@ -1,4 +1,4 @@
-package KW42;
+package KW43;
 /**
  *
  *  ## Zeichenketten aneinander hängen

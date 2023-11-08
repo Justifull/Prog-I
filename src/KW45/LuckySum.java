@@ -1,4 +1,4 @@
-package KW44;
+package KW45;
 /**
  * ## Addieren mit der `luckySum()`
  *

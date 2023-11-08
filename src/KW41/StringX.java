@@ -20,7 +20,7 @@ package KW41;
 class StringX {
 
     public static String stringX(String s) {
-        if (s.length() <= 1) return s;
+        if (s.length() <= 2) return s;
         String middleString = s.substring(1, s.length() - 1).replaceAll("x", "");
         return s.charAt(0) + middleString + s.charAt(s.length() - 1);
     }

@@ -1,4 +1,4 @@
-package KW41;
+package KW42;
 /**
  * ## Zeichen zählen
  *
