@@ -2,6 +2,7 @@ package KW50;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * ## Liste von Blöcken aus Zeichenketten extrahieren
@@ -21,6 +22,7 @@ import java.util.List;
  *
  */
 class Compacts {
+    /*
     public static List<String> compacts(String input) {
         List<String> compactList = new ArrayList<>();
         if (input.isBlank()) return compactList;
@@ -36,6 +38,23 @@ class Compacts {
         }
         compactList.add(curLetter + (letterCounter > 1 ? letterCounter : ""));
         return compactList;
+    }
+    */
+
+    public static List<String> compacts(String input) {
+        List<String> compactList = new ArrayList<>();
+        if (input.isBlank()) return compactList;
+        StringBuilder s = new StringBuilder();
+        for (String c : input.split("")) {
+            if (!s.toString().startsWith(c)) {
+                compactList.add(s.toString());
+                s = new StringBuilder();
+            }
+            s.append(c);
+        }
+        compactList.add(s.toString());
+        compactList.remove(0);
+        return compactList.stream().map(sen -> sen.length() >= 2 ? String.format("%s%d", sen.charAt(0), sen.length()) : sen).collect(Collectors.toList());
     }
 
     public static void main(String[] args) {

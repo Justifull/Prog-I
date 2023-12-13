@@ -2,6 +2,9 @@ package KW50;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static KW47.Blocks.blocks;
 
 /**
  * ## Blocklängen in Zeichenketten bestimmen
@@ -14,6 +17,7 @@ import java.util.List;
  *
  */
 class BlockLengths {
+    /*
     public static List<Integer> blockLengths(String input) {
         List<Integer> resultList = new ArrayList<>();
         if (input.isBlank()) return resultList;
@@ -27,6 +31,11 @@ class BlockLengths {
         }
         if (curLetter.length() > 1) resultList.add(curLetter.length());
         return resultList;
+    }
+    */
+
+    public static List<Integer> blockLengths(String input) {
+        return blocks(input).stream().map(String::length).collect(Collectors.toList());
     }
 
     public static void main(String[] args) {

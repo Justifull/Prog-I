@@ -13,7 +13,7 @@ import java.util.List;
  * Aufrufbeispiele finden Sie in der `main()`-Methode.
  *
  */
-class Blocks {
+public class Blocks {
     /*public static List<String> blocks(String s) {
         if (s.length() <= 1) return new ArrayList<>();
         List<String> resultList = new ArrayList<>();

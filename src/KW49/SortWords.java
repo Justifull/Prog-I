@@ -2,6 +2,8 @@ package KW49;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  *
@@ -44,6 +46,19 @@ class SortWords {
         }
         return sortList(sortedList);
     }
+
+    /*
+    public static List<String> sortWords(String input) {
+        List<String> sortedList = new ArrayList<>();
+        Map<String, String> map = new TreeMap<>();
+        if (input.isBlank()) return sortedList;
+        for (String c : input.split(" ")) {
+            map.put(c, c);
+        }
+        sortedList.addAll(map.keySet());
+        return sortedList;
+    }
+    */
 
     public static void main(String[] args) {
         List<String> words = sortWords("Dies ist nur ein Beispiel");
