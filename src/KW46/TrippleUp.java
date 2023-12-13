@@ -12,15 +12,11 @@ package KW46;
  */
 class TrippleUp {
     public static boolean trippleUp(int[] arr) {
-        int prevNum = arr[0];
-        int trippleCounter = 1;
-        for (int n : arr) {
-            if (trippleCounter >= 3) return true;
-            if (prevNum == n - 1) trippleCounter++;
-            else trippleCounter = 1;
-            prevNum = n;
+        if (arr.length < 3) return false;
+        for (int i = 0; i < (arr.length - 2); i++) {
+            if (arr[i] == (arr[i + 1] - 1) && arr[i] == (arr[i + 2] - 2)) return true;
         }
-        return trippleCounter >= 3;
+        return false;
     }
 
     public static void main(String[] args) {

@@ -1,6 +1,9 @@
-package KW49.Dices;
+package KW48.Dices;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
+import java.util.TreeMap;
 
 public class Dice {
     private int value;

@@ -14,18 +14,16 @@ package KW46;
  */
 public class CheckBrackets {
     public static boolean checkBrackets(String s) {
-        int openCounter = 0;
-        int closeConter = 0;
-        for (String c : s.split("")) {
-            if (c.equals("(")) openCounter++;
-            if (c.equals(")")) closeConter++;
+        int bracketCounter = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') bracketCounter++;
+            else if (s.charAt(i) == ')') bracketCounter--;
         }
-        return openCounter == closeConter;
+        return bracketCounter == 0;
     }
 
 
     public static void main(String[] args) {
-
         boolean check = checkBrackets("()");
         System.out.println(check); // => true
         System.out.println(checkBrackets("(()(a)(()((c))))")); // => true

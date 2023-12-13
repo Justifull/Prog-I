@@ -14,18 +14,45 @@ import java.util.List;
  *
  */
 class Blocks {
+    /*public static List<String> blocks(String s) {
+        if (s.length() <= 1) return new ArrayList<>();
+        List<String> resultList = new ArrayList<>();
+        StringBuilder curSelection = new StringBuilder();
+        for (String c : s.split("")) {
+            if (curSelection.toString().startsWith(c)) curSelection.append(c);
+            else if (curSelection.length() >= 2) {
+                resultList.add(curSelection.toString());
+                curSelection = new StringBuilder(c);
+            }
+            else curSelection = new StringBuilder(c);
+        }
+        if (curSelection.length() >= 2) {
+            resultList.add(curSelection.toString());
+        }
+        return resultList;
+    }*/
+
     public static List<String> blocks(String s) {
         if (s.length() <= 1) return new ArrayList<>();
         List<String> resultList = new ArrayList<>();
+
+
+
         String curSelection = "";
-        for (String c : s.split("")) {
-            if (curSelection.startsWith(c)) curSelection += c;
+
+
+
+        for (String buchstabe : s.split("")) {
+            if (curSelection.startsWith(buchstabe)) curSelection += buchstabe;
             else if (curSelection.length() >= 2) {
                 resultList.add(curSelection);
-                curSelection = c;
+                curSelection = "";
             }
-            else curSelection = c;
+            else curSelection = buchstabe;
         }
+
+
+
         if (curSelection.length() >= 2) {
             resultList.add(curSelection);
         }

@@ -18,31 +18,18 @@ package KW46;
  */
 class NoMultiples {
     public static boolean noMultiples(String s) {
-        if (s.length() < 3) return true;
-        String[] splitS = s.split("");
-        String prevChar = splitS[0];
-        int counter = 1;
-        for (String c : splitS) {
-            if (counter == 3) return false;
-            if (c.equals(prevChar)) counter++;
-            else counter = 1;
-            prevChar = c;
-        }
-        return counter < 3;
+        return noMultiples(3, s);
     }
 
     public static boolean noMultiples(int n, String s) {
         if (s.length() < n) return true;
-        String[] splitS = s.split("");
-        String prevChar = splitS[0];
-        int counter = 1;
-        for (String c : splitS) {
-            if (counter == n) return false;
-            if (c.equals(prevChar)) counter++;
+        int counter = 0;
+        for (int i = 0; i < (s.length() - 1); i++) {
+            if (counter >= n) return false;
+            if (s.charAt(i) == s.charAt(i + 1)) counter++;
             else counter = 1;
-            prevChar = c;
         }
-        return counter < n;
+        return counter <= n;
     }
 
     public static void main(String[] args) {

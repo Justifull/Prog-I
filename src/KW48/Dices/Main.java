@@ -1,4 +1,4 @@
-package KW49.Dices;
+package KW48.Dices;
 
 import java.util.*;
 
@@ -35,7 +35,8 @@ class Main {
         Map<String, Integer> resultMap = new HashMap<>();
         if (list.isEmpty()) return resultMap;
         for (Dice dice : list) {
-            resultMap.put(dice.toString(), resultMap.getOrDefault(dice.toString(), 0) + 1);
+            Integer defaultValue = resultMap.getOrDefault(dice.toString(), 0);
+            resultMap.put(dice.toString(), defaultValue + 1);
         }
         return resultMap;
     }

@@ -1,4 +1,4 @@
-package KW48;
+package KW49;
 
 import java.util.Arrays;
 import java.util.HashMap;

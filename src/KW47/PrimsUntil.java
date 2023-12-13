@@ -45,9 +45,11 @@ class PrimsUntil {
 
     public static String columnize(List<Integer> list, int space) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < list.size(); i++) {
-            stringBuilder.append(list.get(i));
-            if ((i + 1) % space == 0) stringBuilder.append("\n");
+        int counter  = 0;
+        for (Integer n : list) {
+            stringBuilder.append(n);
+            counter++;
+            if (counter % space == 0) stringBuilder.append("\n");
             else stringBuilder.append("\t");
         }
         return stringBuilder.toString();

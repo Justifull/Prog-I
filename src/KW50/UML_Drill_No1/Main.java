@@ -1,4 +1,4 @@
-package KW49.UML_Drill_No1;
+package KW50.UML_Drill_No1;
 /**
  * ## UML to Java (Drillaufgabe 3)
  *
